@@ -2,6 +2,10 @@
 const myTemplate = document.querySelector("#myTemplate").content;
 const student_name = document.querySelector(".student_name");
 
+var student = document.querySelector(".student");
+
+
+
 //console.log(student_name);
 
 //console.log(myTemplate);
@@ -26,6 +30,19 @@ function showSingleStudent(student){
     
     copy.querySelector(".student_name").innerHTML = student.fullname;
     copy.querySelector(".student_house").innerHTML = student.house;
+
+    
+
+    if(student.house == "Hufflepuff"){
+      copy.querySelector(".student").classList.add("hufflepuff");
+    } else if (student.house == "Gryffindor"){
+      copy.querySelector(".student").classList.add("gryffindor");
+    } else if (student.house == "Ravenclaw"){
+      copy.querySelector(".student").classList.add("ravenclaw");
+    } else if (student.house == "Slytherin"){
+      copy.querySelector(".student").classList.add("sltyherin");
+    }
+    
     
     document.querySelector(".student-list").appendChild(copy);
 
